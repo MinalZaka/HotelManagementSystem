@@ -2,7 +2,7 @@
  *
  * @author Minal Zaka
  */
-public class Person 
+public abstract class Person 
 {
 
     protected String id;
@@ -40,5 +40,4 @@ public class Person
                 + "\nPhone Number: " + phoneNo
                 + "\n";
     }
-
 }

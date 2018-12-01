@@ -4,22 +4,34 @@
  */
 public class Guests extends Person
 {
-    private final Room roomSelected;
-    private final int daysStayed;
+    private Room roomSelected;
+    private int daysStayed;
 
-    public Guests(Room roomSelected, int daysStayed, String id, String fname, String lname, int age, String gender, String phoneNo) 
+    public Guests(String id, String fname, String lname, int age, String gender, 
+            String phoneNo, Room roomSelected, int daysStayed) 
     {
         super(id, fname, lname, age, gender, phoneNo);
         this.roomSelected = roomSelected;
         this.daysStayed = daysStayed;
     }
+
+    public int getDaysStayed()
+    {
+        return daysStayed;
+    }
+    
+    public String getRoomType()
+    {
+        return roomSelected.getRoomType();
+    }
        
     @Override
     public String toString()
     {
-        return "Guest Information:\n" + super.toString()
-                + "Room: " + roomSelected.toString()
-                + "Days Stayed: " + daysStayed
+        return "Guest Information:\n" 
+                + super.toString()
+                + "\nRoom: " + roomSelected
+                + "\nDays Stayed: " + daysStayed
                 + "\n";
-    }   
+    }
 }
