@@ -20,9 +20,9 @@ public class Guests extends Person
         return daysStayed;
     }
     
-    public String getRoomType()
+    public String getRoom()
     {
-        return roomSelected.getRoomType();
+        return roomSelected;
     }
        
     @Override
